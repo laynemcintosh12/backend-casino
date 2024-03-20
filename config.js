@@ -8,8 +8,8 @@ const PORT = +process.env.PORT || 3001;
 // Use dev database, testing database, or via env var, production database
 function getDatabaseUri() {
   return (process.env.NODE_ENV === "test")
-      ? "casino-test"
-      : process.env.DATABASE_URL || "casino";
+      ? "postgres://krkfqxaf:n-wbtGfYyKuAMuG57ozDATrHeoYGf4Kl@mahmud.db.elephantsql.com/krkfqxaf"
+      : process.env.DATABASE_URL || "postgres://krkfqxaf:n-wbtGfYyKuAMuG57ozDATrHeoYGf4Kl@mahmud.db.elephantsql.com/krkfqxaf";
 }
 
 
