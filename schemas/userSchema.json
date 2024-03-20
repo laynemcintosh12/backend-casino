@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "username": {
+        "type": "string",
+        "description": "The username of the user."
+      },
+      "email": {
+        "type": "string",
+        "format": "email",
+        "description": "The email of the user."
+      },
+      "isAdmin": {
+        "type": "boolean",
+        "description": "Indicates whether the user is an admin or not."
+      }
+    },
+    "required": ["username", "email", "isAdmin"]
+  }
+  
