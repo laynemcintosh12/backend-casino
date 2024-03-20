@@ -11,7 +11,7 @@ const userRoutes = require("./routes/users");
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:3000'
+  origin: 'https://frontend-casino.onrender.com'
 }))
 app.use(express.json());
 app.use(authenticateJWT);
