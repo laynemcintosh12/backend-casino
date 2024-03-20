@@ -4,25 +4,16 @@ const { getDatabaseUri } = require("./config");
 let db;
 
 if (process.env.NODE_ENV === "production") {
-  db = new Client({
-    user: 'laynemcintosh12',
-    host: 'localhost',
-    database: getDatabaseUri(),
-    password: 'password', 
-    port: 5432,
-    ssl: {
-      rejectUnauthorized: false,
-    },
-  });
+  db = new Client(
+    getDatabaseUri()
+  );
 } else {
-  db = new Client({
-    user: 'laynemcintosh12',
-    host: 'localhost',
-    database: getDatabaseUri(),
-    password: 'password', 
-    port: 5432
-  });
+  db = new Client(
+    getDatabaseUri(),
+  );
+  
 }
+
 
 db.connect();
 
